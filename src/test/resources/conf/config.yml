@@ -1,0 +1,50 @@
+#This will populate the metrics in all the tiers, under this path(not recommended)
+#metricPrefix: "Custom metrics|Prometheus"
+
+#The following prefix will populate the metrics under one tier
+metricPrefix: "Server|Component:AppLevels|Custom Metrics|Prometheus"
+
+#Add your list of Prometheus servers here.
+servers:
+  - name: "Server1"
+    host: "localhost"
+    port: "6379"
+    password: ""
+    useSSL: false
+
+
+# Each server instance needs 2 threads, one for the server instance itself, and one for the HTTP call to the Prometheus server.
+# So, please change the value accordingly (based on the number of server instances you are monitoring).
+numberOfThreads: 20
+
+# Sample configuration for Node Exporter
+metrics:
+    Golang Runtime:
+        - go_gc_duration_seconds
+        - go_memstats_alloc_bytes
+        - go_memstats_heap_alloc_bytes
+        - go_memstats_heap_objects
+        - go_memstats_heap_sys_bytes
+        - go_threads
+    Host Metrics:
+        CPU:
+            - node_cpu_frequency_min_hertz
+            - node_cpu_frequency_max_hertz
+            - node_cpu_guest_seconds_total
+            - node_cpu_seconds_total
+        Disks:
+            - node_disk_io_time_seconds_total
+            - node_disk_io_time_weighted_seconds_total
+            - node_disk_read_bytes_total
+            - node_disk_read_time_seconds_total
+            - node_disk_reads_completed_total
+            - node_disk_written_bytes_total
+            - node_disk_write_time_seconds_total
+            - node_disk_writes_completed_total
+        Volumes:
+            - node_filesystem_avail_bytes
+            - node_filesystem_device_error
+            - node_filesystem_files
+            - node_filesystem_files_free
+            - node_filesystem_free_bytes
+            - node_filesystem_size_bytes

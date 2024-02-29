@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "mvn compile package",
+			"problemMatcher": [],
+			"label": "maven-package",
+			"detail": "$(tools) Build all the Java projects in workspace."
+		}
+	]
+}
