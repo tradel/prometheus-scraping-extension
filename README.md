@@ -101,25 +101,8 @@ More details around metric prefix can be found [here](https://community.appdynam
      **All these metric properties are optional, and the default value shown in the table is applied to the metric(if a property has not been specified) by default.**
 
 
-## Metrics
-This extension uses [INFO](http://prometheus.io/commands/info) command to fetch metrics from Prometheus server. Some of the metrics are listed below:
-```
-      * Clients: connected_clients, blocked_clients
-      * Memory: used_memory, used_memory_rss, used_memory_peak, used_memory_lua, mem_fragmentation_ratio
-      * Stats: total_connections_received, total_commands_processed, keyspace_hits, keyspace_misses, keyspace_hit_ratio
-      * Persistence: rdb_changes_since_last_save, aof_last_rewrite_time_sec
-      * replication: role (MASTER:1, SLAVE:0), connected_slaves
-      * CPU: used_cpu_sys, used_cpu_user, used_cpu_sys_children, used_cpu_user_children
-```
-This extension also uses [SLOWLOG](https://prometheus.io/commands/slowlog) to fetch metrics from Prometheus server.
-```
-      * no_of_new_slow_logs -> This metric represents the number of new logs that were recorded as slowlogs(log queries that exceeded a specified
-                               execution time) since the extension has recorded in its previous run.
-        To use this metric, the "slowlog-log-slower-than" config parameter has to be set for the Prometheus server.
-```
-In addition to the above metrics, there is a metric called "connectionStatus" with a value 0 when the connection to Prometheus server failed and 1 when the connection to the Prometheus server is successful.
+## Credential Encryption
 
-## Credentials Encryption
 Please visit [this page](https://community.appdynamics.com/t5/Knowledge-Base/How-to-use-Password-Encryption-with-Extensions/ta-p/29397) to get detailed instructions on password encryption. The steps in this document will guide you through the whole process.
 
 ## Extensions Workbench
@@ -132,15 +115,13 @@ Please follow the steps listed in this [troubleshooting-document](https://commun
 
 ## Contributing
 
-Always feel free to fork and contribute any changes directly here on [GitHub](https://github.com/Appdynamics/prometheus-monitoring-extension).
+Always feel free to fork and contribute any changes directly here on [GitHub](https://github.com/tradel/prometheus-monitoring-extension).
 
 ## Version
 
 |                          |           |
 |--------------------------|-----------|
-|Current version           |3.0.1      |
-|Prometheus version tested on   |3.9, 4.0.8 |
-|Last Update               |22/01/2021 |
-|Changes list              |[ChangeLog](https://github.com/Appdynamics/prometheus-monitoring-extension/blob/master/CHANGELOG.md)|
+|Current version           |1.0.0      |
+|Last Update               |02/29/2024 |
+|Changes list              |[ChangeLog](https://github.com/tradel/prometheus-monitoring-extension/blob/main/CHANGELOG.md)|
 
-**Note**: While extensions are maintained and supported by customers under the open-source licensing model, they interact with agents and Controllers that are subject to [AppDynamics’ maintenance and support policy](https://docs.appdynamics.com/latest/en/product-and-release-announcements/maintenance-support-for-software-versions). Some extensions have been tested with AppDynamics 4.5.13+ artifacts, but you are strongly recommended against using versions that are no longer supported.

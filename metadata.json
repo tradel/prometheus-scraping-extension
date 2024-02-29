@@ -3,17 +3,17 @@
 	"type": "monitor",
 	"displayName": "Prometheus Endpoint Scraping Extension",
 	"description": "An AppDynamics extension to scrape a Prometheus metrics endpoint.",
-	"version": "1.0.0",
-	"downloadLink": "https://github.com/tradel/prometheus-scraping-extension/releases/download/v1.0.0/PrometheusScraper-1.0.0.zip",
+	"version": "1.0.1",
+	"downloadLink": "https://github.com/tradel/prometheus-scraping-extension/releases/download/v1.0.1/PrometheusScraper-1.0.0.zip",
 	"imageLink": "https:///www.appdynamics.com/media/uploaded-images/1510098508/.thumbnails/prometheus-logo-stack-52x0.png",
 	"configs": [
 		{
 			"name": "monitor.xml",
-			"link": "https://raw.githubusercontent.com/tradel/prometheus-scraping-extension/master/src/main/resources/conf/monitor.xml"
+			"link": "https://raw.githubusercontent.com/tradel/prometheus-scraping-extension/main/src/main/resources/conf/monitor.xml"
 		},
 		{
 			"name": "config.yml",
-			"link": "https://raw.githubusercontent.com/tradel/prometheus-scraping-extension/master/src/main/resources/conf/config.yml"
+			"link": "https://raw.githubusercontent.com/tradel/prometheus-scraping-extension/main/src/main/resources/conf/config.yml"
 		}
 	]
 }
